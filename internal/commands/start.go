@@ -18,7 +18,7 @@ import (
 func StartConsole() *cli.Command {
 	return &cli.Command{
 		Name:   "start",
-		Usage:  "Start the OpenUEM console",
+		Usage:  "Start the scnorion console",
 		Action: startConsole,
 		Flags:  StartConsoleFlags(),
 	}
@@ -28,7 +28,7 @@ func startConsole(cCtx *cli.Context) error {
 	worker := common.NewWorker("")
 
 	if err := worker.GenerateConsoleConfigFromCLI(cCtx); err != nil {
-		log.Fatalf("[FATAL]: could not generate config for OpenUEM Console: %v", err)
+		log.Fatalf("[FATAL]: could not generate config for scnorion Console: %v", err)
 	}
 
 	// Get working directory

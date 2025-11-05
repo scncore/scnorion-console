@@ -12,7 +12,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/scncore/scnorion-console/internal/views/register_views"
 )
@@ -161,11 +161,11 @@ func (h *Handler) SendRegister(c echo.Context) error {
 		return RenderError(c, partials.ErrorMessage(err.Error(), false))
 	}
 
-	notification := openuem_nats.Notification{
+	notification := scnorion_nats.Notification{
 		To:               r.Email,
 		Subject:          "Please, confirm your email address",
-		MessageTitle:     "OpenUEM | Verify your email address",
-		MessageText:      "Please, confirm your email address so that it can be used to receive emails from OpenUEM",
+		MessageTitle:     "scnorion | Verify your email address",
+		MessageText:      "Please, confirm your email address so that it can be used to receive emails from scnorion",
 		MessageGreeting:  fmt.Sprintf("Hi %s", r.Name),
 		MessageAction:    "Confirm email",
 		MessageActionURL: c.Request().Header.Get("Origin") + "/auth/confirm/" + token,
@@ -220,7 +220,7 @@ func (h *Handler) generateConfirmEmailToken(uid string) (string, error) {
 		ExpiresAt: jwt.NewNumericDate(time.Now().Add(24 * time.Hour)),
 		IssuedAt:  jwt.NewNumericDate(time.Now()),
 		NotBefore: jwt.NewNumericDate(time.Now()),
-		Issuer:    "OpenUEM",
+		Issuer:    "scnorion",
 		Subject:   "Email Confirmation",
 		ID:        uid,
 	})

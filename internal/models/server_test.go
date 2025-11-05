@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/scncore/ent/enttest"
 	"github.com/scncore/ent/server"
 	"github.com/scncore/scnorion-console/internal/views/filters"
@@ -234,7 +234,7 @@ func (suite *ServersTestSuite) TestGetServerById() {
 
 	_, err = suite.model.GetServerById(0)
 	assert.Error(suite.T(), err, "should get an error using a non existent id")
-	assert.Equal(suite.T(), true, openuem_ent.IsNotFound(err), "query should return a not found error")
+	assert.Equal(suite.T(), true, scnorion_ent.IsNotFound(err), "query should return a not found error")
 }
 
 func (suite *ServersTestSuite) TestDeleteServer() {

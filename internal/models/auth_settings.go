@@ -4,15 +4,15 @@ import (
 	"context"
 	"errors"
 
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/sethvargo/go-password/password"
 )
 
-func (m *Model) GetAuthenticationSettings() (*openuem_ent.Authentication, error) {
+func (m *Model) GetAuthenticationSettings() (*scnorion_ent.Authentication, error) {
 
 	settings, err := m.Client.Authentication.Query().Only(context.Background())
 	if err != nil {
-		if !openuem_ent.IsNotFound(err) {
+		if !scnorion_ent.IsNotFound(err) {
 			return nil, err
 		}
 

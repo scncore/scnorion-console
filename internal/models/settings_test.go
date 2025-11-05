@@ -96,8 +96,8 @@ func (suite *SettingsTestSuite) TestGetDefaultUpdateChannel() {
 	assert.Equal(suite.T(), "stable", defaultUpdateChannel, "default update channel should be stable")
 }
 
-func (suite *SettingsTestSuite) TestUpdateOpenUEMChannel() {
-	err := suite.model.UpdateOpenUEMChannel(suite.settingsId, "devel")
+func (suite *SettingsTestSuite) TestUpdatescnorionChannel() {
+	err := suite.model.UpdatescnorionChannel(suite.settingsId, "devel")
 	assert.NoError(suite.T(), err, "should update channel setting")
 
 	setting, err := suite.model.GetDefaultUpdateChannel()

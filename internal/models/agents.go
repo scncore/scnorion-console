@@ -15,7 +15,7 @@ import (
 	"github.com/scncore/ent/systemupdate"
 	"github.com/scncore/ent/tag"
 	"github.com/scncore/ent/tenant"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/scnorion-console/internal/views/filters"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 )
@@ -563,9 +563,9 @@ func (m *Model) CountNoAutoupdateAgents(c *partials.CommonInfo) (int, error) {
 	}
 
 	if siteID == -1 {
-		return m.Client.Agent.Query().Where(agent.HasSystemupdateWith(systemupdate.Not(systemupdate.SystemUpdateStatusContains(openuem_nats.NOTIFY_SCHEDULED_INSTALLATION))), agent.AgentStatusNEQ(agent.AgentStatusWaitingForAdmission)).Where(agent.HasSiteWith(site.HasTenantWith(tenant.ID(tenantID)))).Count(context.Background())
+		return m.Client.Agent.Query().Where(agent.HasSystemupdateWith(systemupdate.Not(systemupdate.SystemUpdateStatusContains(scnorion_nats.NOTIFY_SCHEDULED_INSTALLATION))), agent.AgentStatusNEQ(agent.AgentStatusWaitingForAdmission)).Where(agent.HasSiteWith(site.HasTenantWith(tenant.ID(tenantID)))).Count(context.Background())
 	} else {
-		return m.Client.Agent.Query().Where(agent.HasSystemupdateWith(systemupdate.Not(systemupdate.SystemUpdateStatusContains(openuem_nats.NOTIFY_SCHEDULED_INSTALLATION))), agent.AgentStatusNEQ(agent.AgentStatusWaitingForAdmission)).Where(agent.HasSiteWith(site.ID(siteID), site.HasTenantWith(tenant.ID(tenantID)))).Count(context.Background())
+		return m.Client.Agent.Query().Where(agent.HasSystemupdateWith(systemupdate.Not(systemupdate.SystemUpdateStatusContains(scnorion_nats.NOTIFY_SCHEDULED_INSTALLATION))), agent.AgentStatusNEQ(agent.AgentStatusWaitingForAdmission)).Where(agent.HasSiteWith(site.ID(siteID), site.HasTenantWith(tenant.ID(tenantID)))).Count(context.Background())
 	}
 }
 
@@ -805,7 +805,7 @@ func (m *Model) GetAllUpdateAgents(f filters.UpdateAgentsFilter, c *partials.Com
 	return agents, nil
 }
 
-func (m *Model) SaveAgentSettings(agentID string, settings openuem_nats.AgentSetting, c *partials.CommonInfo) (*ent.Agent, error) {
+func (m *Model) SaveAgentSettings(agentID string, settings scnorion_nats.AgentSetting, c *partials.CommonInfo) (*ent.Agent, error) {
 	siteID, err := strconv.Atoi(c.SiteID)
 	if err != nil {
 		return nil, err

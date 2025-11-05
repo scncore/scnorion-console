@@ -11,10 +11,10 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/scncore/ent/release"
 	"github.com/scncore/ent/server"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	model "github.com/scncore/scnorion-console/internal/models/servers"
 	"github.com/scncore/scnorion-console/internal/views/admin_views"
 	"github.com/scncore/scnorion-console/internal/views/filters"
@@ -67,7 +67,7 @@ func (h *Handler) UpdateServers(c echo.Context) error {
 				break
 			}
 
-			updateRequest := openuem_nats.OpenUEMUpdateRequest{}
+			updateRequest := scnorion_nats.scnorionUpdateRequest{}
 			updateRequest.DownloadFrom = releaseToBeApplied.FileURL
 			updateRequest.DownloadHash = releaseToBeApplied.Checksum
 			updateRequest.Version = releaseToBeApplied.Version
@@ -164,7 +164,7 @@ func (h *Handler) DeleteServerConfirm(c echo.Context) error {
 	return RenderConfirm(c, partials.ConfirmDelete(c, i18n.T(c.Request().Context(), "admin.update.servers.confirm_delete"), "/admin/update-servers", fmt.Sprintf("/admin/update-servers/%s", server)))
 }
 
-func (h *Handler) ShowUpdateServersList(c echo.Context, r *openuem_ent.Release, successMessage, errorMessage string) error {
+func (h *Handler) ShowUpdateServersList(c echo.Context, r *scnorion_ent.Release, successMessage, errorMessage string) error {
 	var err error
 
 	commonInfo, err := h.GetCommonInfo(c)

@@ -4,14 +4,14 @@ import (
 	"context"
 	"strconv"
 
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/scncore/ent/settings"
 	"github.com/scncore/ent/tenant"
 )
 
-func (m *Model) GetSMTPSettings(tenantID string) (*openuem_ent.Settings, error) {
+func (m *Model) GetSMTPSettings(tenantID string) (*scnorion_ent.Settings, error) {
 	var err error
-	var s *openuem_ent.Settings
+	var s *scnorion_ent.Settings
 
 	query := m.Client.Settings.Query().Select(
 		settings.FieldSMTPServer,
@@ -26,7 +26,7 @@ func (m *Model) GetSMTPSettings(tenantID string) (*openuem_ent.Settings, error) 
 	if tenantID == "-1" {
 		s, err = query.Where(settings.Not(settings.HasTenant())).Only(context.Background())
 		if err != nil {
-			if !openuem_ent.IsNotFound(err) {
+			if !scnorion_ent.IsNotFound(err) {
 				return nil, err
 			} else {
 				if tenantID == "-1" {
@@ -55,7 +55,7 @@ func (m *Model) GetSMTPSettings(tenantID string) (*openuem_ent.Settings, error) 
 
 		s, err = query.Where(settings.HasTenantWith(tenant.ID(id))).Only(context.Background())
 		if err != nil {
-			if !openuem_ent.IsNotFound(err) {
+			if !scnorion_ent.IsNotFound(err) {
 				return nil, err
 			} else {
 				if tenantID == "-1" {

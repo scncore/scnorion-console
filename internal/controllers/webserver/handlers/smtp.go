@@ -155,7 +155,7 @@ func sendEmailTest(settings *models.SMTPSettings, to string) error {
 	if err := m.To(to); err != nil {
 		return err
 	}
-	m.Subject("This is a test email from OpenUEM")
+	m.Subject("This is a test email from scnorion")
 
 	return c.DialAndSend(m)
 }

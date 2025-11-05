@@ -9,7 +9,7 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	models "github.com/scncore/scnorion-console/internal/models/winget"
 	"github.com/scncore/scnorion-console/internal/views/deploy_views"
 	"github.com/scncore/scnorion-console/internal/views/filters"
@@ -215,7 +215,7 @@ func (h *Handler) DeployPackageToSelectedAgents(c echo.Context) error {
 	}
 
 	for _, agent := range agents {
-		action := openuem_nats.DeployAction{
+		action := scnorion_nats.DeployAction{
 			AgentId:     agent,
 			PackageId:   packageId,
 			PackageName: packageName,

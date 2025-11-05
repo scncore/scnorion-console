@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/scncore/ent/agent"
 	"github.com/scncore/ent/enttest"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/scnorion-console/internal/views/filters"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/stretchr/testify/assert"
@@ -115,9 +115,9 @@ func (suite *AgentsTestSuite) SetupTest() {
 		}
 
 		if i%3 == 0 {
-			query.SetSystemUpdateStatus(openuem_nats.NOTIFY_BEFORE_DOWNLOAD)
+			query.SetSystemUpdateStatus(scnorion_nats.NOTIFY_BEFORE_DOWNLOAD)
 		} else {
-			query.SetSystemUpdateStatus(openuem_nats.NOTIFY_BEFORE_INSTALLATION)
+			query.SetSystemUpdateStatus(scnorion_nats.NOTIFY_BEFORE_INSTALLATION)
 		}
 
 		err := query.SetOwnerID(fmt.Sprintf("agent%d", i)).Exec(context.Background())
@@ -260,7 +260,7 @@ func (suite *AgentsTestSuite) TestGetAgentById() {
 
 	_, err = suite.model.GetAgentById("agent7", suite.commonInfo)
 	assert.Error(suite.T(), err, "should not get agent by id")
-	assert.Equal(suite.T(), true, openuem_ent.IsNotFound(err), "should raise is not found error")
+	assert.Equal(suite.T(), true, scnorion_ent.IsNotFound(err), "should raise is not found error")
 }
 
 func (suite *AgentsTestSuite) TestCountAllAgents() {

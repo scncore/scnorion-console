@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/scncore/ent/enttest"
 	"github.com/scncore/scnorion-console/internal/views/filters"
 	"github.com/scncore/scnorion-console/internal/views/partials"
@@ -46,7 +46,7 @@ func (suite *CertificatesTestSuite) TestGetCertificateByUID() {
 
 	_, err = suite.model.GetCertificateByUID("user7")
 	assert.Error(suite.T(), err, "should not get certificate by uid")
-	assert.Equal(suite.T(), true, openuem_ent.IsNotFound(err), "should raise not found error")
+	assert.Equal(suite.T(), true, scnorion_ent.IsNotFound(err), "should raise not found error")
 }
 
 func (suite *CertificatesTestSuite) TestGetCertificateBySerial() {
@@ -57,11 +57,11 @@ func (suite *CertificatesTestSuite) TestGetCertificateBySerial() {
 
 	_, err = suite.model.GetCertificateBySerial("7")
 	assert.Error(suite.T(), err, "should not get certificate by serial")
-	assert.Equal(suite.T(), true, openuem_ent.IsNotFound(err), "should raise not found error")
+	assert.Equal(suite.T(), true, scnorion_ent.IsNotFound(err), "should raise not found error")
 }
 
 func (suite *CertificatesTestSuite) TestRevokeCertificate() {
-	err := suite.model.RevokeCertificate(&openuem_ent.Certificate{
+	err := suite.model.RevokeCertificate(&scnorion_ent.Certificate{
 		ID: int64(1),
 	}, "test", ocsp.CessationOfOperation)
 	assert.NoError(suite.T(), err, "should revoke certificate")
@@ -77,7 +77,7 @@ func (suite *CertificatesTestSuite) TestDeleteCertificate() {
 
 	err = suite.model.DeleteCertificate(int64(8))
 	assert.Error(suite.T(), err, "should not delete non existent certificate")
-	assert.Equal(suite.T(), true, openuem_ent.IsNotFound(err), "should raise not found error")
+	assert.Equal(suite.T(), true, scnorion_ent.IsNotFound(err), "should raise not found error")
 }
 
 func (suite *CertificatesTestSuite) TestCountAllCertificates() {

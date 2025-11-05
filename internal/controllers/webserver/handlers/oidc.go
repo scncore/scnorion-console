@@ -201,14 +201,14 @@ func (h *Handler) OIDCCallback(c echo.Context) error {
 			}
 
 			if !slices.Contains(data.Roles, settings.OIDCRole) {
-				return echo.NewHTTPError(http.StatusUnauthorized, "user has no permission to log in to OpenUEM")
+				return echo.NewHTTPError(http.StatusUnauthorized, "user has no permission to log in to scnorion")
 			}
 		}
 	} else {
 
 		if settings.OIDCRole != "" {
 			if !slices.Contains(u.Groups, settings.OIDCRole) {
-				return echo.NewHTTPError(http.StatusUnauthorized, "user has no permission to log in to OpenUEM")
+				return echo.NewHTTPError(http.StatusUnauthorized, "user has no permission to log in to scnorion")
 			}
 		}
 	}

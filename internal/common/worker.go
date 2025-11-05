@@ -14,7 +14,7 @@ import (
 
 type Worker struct {
 	Model                             *models.Model
-	Logger                            *utils.OpenUEMLogger
+	Logger                            *utils.scnorionLogger
 	DBConnectJob                      gocron.Job
 	ConfigJob                         gocron.Job
 	TaskScheduler                     gocron.Scheduler

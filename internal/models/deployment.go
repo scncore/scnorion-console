@@ -10,7 +10,7 @@ import (
 	"github.com/scncore/ent/deployment"
 	"github.com/scncore/ent/site"
 	"github.com/scncore/ent/tenant"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
@@ -147,7 +147,7 @@ func (m *Model) CountAllDeployments(c *partials.CommonInfo) (int, error) {
 	}
 }
 
-func (m *Model) SaveDeployInfo(data *openuem_nats.DeployAction, deploymentFailed bool, c *partials.CommonInfo) error {
+func (m *Model) SaveDeployInfo(data *scnorion_nats.DeployAction, deploymentFailed bool, c *partials.CommonInfo) error {
 	timeZero := time.Date(0001, 1, 1, 00, 00, 00, 00, time.UTC)
 
 	siteID, err := strconv.Atoi(c.SiteID)

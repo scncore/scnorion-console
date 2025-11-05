@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-co-op/gocron/v2"
 	"github.com/scncore/ent/release"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/utils"
 )
 
@@ -43,14 +43,14 @@ func (w *Worker) GetLatestReleases(channel string) error {
 
 func (w *Worker) CheckAgentLatestReleases(channel string) error {
 	// Check agent release against our API
-	url := fmt.Sprintf("https://releases.openuem.eu/api?action=latestAgentRelease&channel=%s", channel)
+	url := fmt.Sprintf("https://releases.scnorion.eu/api?action=latestAgentRelease&channel=%s", channel)
 
 	body, err := utils.QueryReleasesEndpoint(url)
 	if err != nil {
 		return err
 	}
 
-	latestAgentRelease := openuem_nats.OpenUEMRelease{}
+	latestAgentRelease := scnorion_nats.scnorionRelease{}
 	if err := json.Unmarshal(body, &latestAgentRelease); err != nil {
 		return err
 	}
@@ -64,14 +64,14 @@ func (w *Worker) CheckAgentLatestReleases(channel string) error {
 
 func (w *Worker) CheckServerLatestReleases(channel string) error {
 	// Check server release against our API
-	url := fmt.Sprintf("https://releases.openuem.eu/api?action=latestServerRelease&channel=%s", channel)
+	url := fmt.Sprintf("https://releases.scnorion.eu/api?action=latestServerRelease&channel=%s", channel)
 
 	body, err := utils.QueryReleasesEndpoint(url)
 	if err != nil {
 		return err
 	}
 
-	latestServerRelease := openuem_nats.OpenUEMRelease{}
+	latestServerRelease := scnorion_nats.scnorionRelease{}
 	if err := json.Unmarshal(body, &latestServerRelease); err != nil {
 		return err
 	}

@@ -20,8 +20,8 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/linde12/gowol"
 	"github.com/microcosm-cc/bluemonday"
-	openuem_ent "github.com/scncore/ent"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_ent "github.com/scncore/ent"
+	scnorion_nats "github.com/scncore/nats"
 	models "github.com/scncore/scnorion-console/internal/models/winget"
 	"github.com/scncore/scnorion-console/internal/views/computers_views"
 	"github.com/scncore/scnorion-console/internal/views/filters"
@@ -732,7 +732,7 @@ func (h *Handler) ComputerDeploy(c echo.Context, successMessage string) error {
 
 func (h *Handler) ComputerDeploySearchPackagesInstall(c echo.Context) error {
 	var f filters.DeployPackageFilter
-	var packages []openuem_nats.SoftwarePackage
+	var packages []scnorion_nats.SoftwarePackage
 
 	commonInfo, err := h.GetCommonInfo(c)
 	if err != nil {
@@ -843,7 +843,7 @@ func (h *Handler) ComputerDeployInstall(c echo.Context) error {
 		return RenderError(c, partials.ErrorMessage(err.Error(), true))
 	}
 
-	action := openuem_nats.DeployAction{}
+	action := scnorion_nats.DeployAction{}
 	action.AgentId = agentId
 	action.PackageId = packageId
 	action.PackageName = packageName
@@ -890,7 +890,7 @@ func (h *Handler) ComputerDeployUpdate(c echo.Context) error {
 		return RenderError(c, partials.ErrorMessage(i18n.T(c.Request().Context(), "agents.deploy_empty_values"), true))
 	}
 
-	action := openuem_nats.DeployAction{}
+	action := scnorion_nats.DeployAction{}
 	action.AgentId = agentId
 	action.PackageId = packageId
 	action.PackageName = packageName
@@ -952,7 +952,7 @@ func (h *Handler) ComputerDeployUninstall(c echo.Context) error {
 		return h.ComputerDeploy(c, i18n.T(c.Request().Context(), "agents.deployment_removed"))
 	}
 
-	action := openuem_nats.DeployAction{}
+	action := scnorion_nats.DeployAction{}
 	action.AgentId = agentId
 	action.PackageId = packageId
 	action.PackageName = packageName
@@ -1039,7 +1039,7 @@ func (h *Handler) PowerManagement(c echo.Context) error {
 			return RenderError(c, partials.ErrorMessage(i18n.T(c.Request().Context(), "nats.not_connected"), false))
 		}
 
-		action := openuem_nats.RebootOrRestart{}
+		action := scnorion_nats.RebootOrRestart{}
 		var whenTime time.Time
 		when := c.FormValue("when")
 		if when != "" {
@@ -1070,7 +1070,7 @@ func (h *Handler) PowerManagement(c echo.Context) error {
 			return RenderError(c, partials.ErrorMessage(i18n.T(c.Request().Context(), "nats.not_connected"), false))
 		}
 
-		action := openuem_nats.RebootOrRestart{}
+		action := scnorion_nats.RebootOrRestart{}
 		var whenTime time.Time
 		when := c.FormValue("when")
 		if when != "" {
@@ -1102,7 +1102,7 @@ func (h *Handler) PowerManagement(c echo.Context) error {
 }
 
 func (h *Handler) ComputerMetadata(c echo.Context) error {
-	var data []*openuem_ent.Metadata
+	var data []*scnorion_ent.Metadata
 
 	commonInfo, err := h.GetCommonInfo(c)
 	if err != nil {
@@ -1279,7 +1279,7 @@ func (h *Handler) ComputerStartVNC(c echo.Context) error {
 			return RenderError(c, partials.ErrorMessage(i18n.T(c.Request().Context(), "agents.vnc_pin_not_generated"), false))
 		}
 
-		vncConn := openuem_nats.VNCConnection{}
+		vncConn := scnorion_nats.VNCConnection{}
 		vncConn.NotifyUser = requestPIN
 		vncConn.PIN = pin
 
@@ -1395,7 +1395,7 @@ func (h *Handler) GenerateRDPFile(c echo.Context) error {
 	if _, err := f.WriteString(fmt.Sprintf("full address:s:%s\n", agent.IP)); err != nil {
 		return RenderError(c, partials.ErrorMessage(err.Error(), false))
 	}
-	if _, err := f.WriteString("username:s:openuem\n"); err != nil {
+	if _, err := f.WriteString("username:s:scnorion\n"); err != nil {
 		return RenderError(c, partials.ErrorMessage(err.Error(), false))
 	}
 	if _, err := f.WriteString("audiocapturemode:i:0\n"); err != nil {

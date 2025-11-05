@@ -6,7 +6,7 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/scnorion-console/internal/views/filters"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/scncore/scnorion-console/internal/views/security_views"
@@ -236,7 +236,7 @@ func (h *Handler) GetSystemUpdatesFilters(c echo.Context) (*filters.SystemUpdate
 	}
 	f.PendingUpdateOptions = filteredPendingUpdates
 
-	availableUpdateStatus := openuem_nats.SystemUpdatePossibleStatus()
+	availableUpdateStatus := scnorion_nats.SystemUpdatePossibleStatus()
 	filteredUpdateStatus := []string{}
 	for index := range availableUpdateStatus {
 		value := c.FormValue(fmt.Sprintf("filterByUpdateStatus%d", index))

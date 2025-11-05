@@ -999,7 +999,7 @@ func getPageHeader(title string) core.Row {
 	}
 
 	return row.New(10).Add(
-		image.NewFromFileCol(3, filepath.Join(cwd, "assets", "img", "openuem.png"), props.Rect{
+		image.NewFromFileCol(3, filepath.Join(cwd, "assets", "img", "scnorion.png"), props.Rect{
 			Percent: 75,
 		}),
 		text.NewCol(6, title, props.Text{

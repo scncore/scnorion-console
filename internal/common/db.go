@@ -60,7 +60,7 @@ func (w *Worker) StartDBConnectJob() error {
 
 		w.StartConsoleService()
 
-		// Start a job to check latest OpenUEM releases
+		// Start a job to check latest scnorion releases
 		channel, err := w.Model.GetDefaultUpdateChannel()
 		if err != nil {
 			log.Println("[ERROR]: could not get updates channel settings")
@@ -133,7 +133,7 @@ func (w *Worker) StartDBConnectJob() error {
 
 				w.StartConsoleService()
 
-				// Start a job to check latest OpenUEM releases
+				// Start a job to check latest scnorion releases
 				channel, err := w.Model.GetDefaultUpdateChannel()
 				if err != nil {
 					log.Println("[ERROR]: could not get updates channel settings")

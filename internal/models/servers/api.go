@@ -6,10 +6,10 @@ import (
 	"os"
 	"path/filepath"
 
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 )
 
-func GetLatestServerReleaseFromAPI(tmpDir string) (*openuem_nats.OpenUEMRelease, error) {
+func GetLatestServerReleaseFromAPI(tmpDir string) (*scnorion_nats.scnorionRelease, error) {
 	latestServerReleasePath := filepath.Join(tmpDir, "latest.json")
 
 	if _, err := os.Stat(latestServerReleasePath); os.IsNotExist(err) {
@@ -21,7 +21,7 @@ func GetLatestServerReleaseFromAPI(tmpDir string) (*openuem_nats.OpenUEMRelease,
 		return nil, err
 	}
 
-	r := openuem_nats.OpenUEMRelease{}
+	r := scnorion_nats.scnorionRelease{}
 	if err := json.Unmarshal(data, &r); err != nil {
 		return nil, err
 	}

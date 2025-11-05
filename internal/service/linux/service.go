@@ -15,7 +15,7 @@ import (
 func main() {
 	var err error
 
-	w := common.NewWorker("openuem-console-service")
+	w := common.NewWorker("scnorion-console-service")
 
 	// Start Task Scheduler
 	w.TaskScheduler, err = gocron.NewScheduler()
@@ -27,9 +27,9 @@ func main() {
 	log.Println("[INFO]: task scheduler has been started")
 
 	if err := w.GenerateConsoleConfig(); err != nil {
-		log.Printf("[ERROR]: could not generate config for OpenUEM console: %v", err)
+		log.Printf("[ERROR]: could not generate config for scnorion console: %v", err)
 		if err := w.StartGenerateConsoleConfigJob(); err != nil {
-			log.Fatalf("[FATAL]: could not start job to generate config for OpenUEM console: %v", err)
+			log.Fatalf("[FATAL]: could not start job to generate config for scnorion console: %v", err)
 		}
 	}
 

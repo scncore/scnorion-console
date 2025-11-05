@@ -570,7 +570,7 @@ func (h *Handler) DownloadFolderAsZIP(c echo.Context) error {
 	defer client.Close()
 	defer sshConn.Close()
 
-	file, err := os.CreateTemp(h.DownloadDir, "openuem")
+	file, err := os.CreateTemp(h.DownloadDir, "scnorion")
 	if err != nil {
 		return RenderError(c, partials.ErrorMessage(err.Error(), false))
 	}
@@ -648,7 +648,7 @@ func (h *Handler) DownloadManyAsZIP(c echo.Context) error {
 	defer client.Close()
 	defer sshConn.Close()
 
-	file, err := os.CreateTemp(h.DownloadDir, "openuem")
+	file, err := os.CreateTemp(h.DownloadDir, "scnorion")
 	if err != nil {
 		return RenderError(c, partials.ErrorMessage(err.Error(), false))
 	}

@@ -17,7 +17,7 @@ func (w *Worker) GetServerReleases() error {
 		return err
 	}
 
-	url := fmt.Sprintf("https://releases.openuem.eu/api?action=latestServerRelease&channel=%s", settings.UpdateChannel)
+	url := fmt.Sprintf("https://releases.scnorion.eu/api?action=latestServerRelease&channel=%s", settings.UpdateChannel)
 
 	body, err := utils.QueryReleasesEndpoint(url)
 	if err != nil {
@@ -30,7 +30,7 @@ func (w *Worker) GetServerReleases() error {
 		return err
 	}
 
-	url = fmt.Sprintf("https://releases.openuem.eu/api?action=allServerReleases&channel=%s", settings.UpdateChannel)
+	url = fmt.Sprintf("https://releases.scnorion.eu/api?action=allServerReleases&channel=%s", settings.UpdateChannel)
 
 	body, err = utils.QueryReleasesEndpoint(url)
 	if err != nil {

@@ -9,7 +9,7 @@ import (
 
 	"github.com/scncore/ent/agent"
 	"github.com/scncore/ent/enttest"
-	openuem_nats "github.com/scncore/nats"
+	scnorion_nats "github.com/scncore/nats"
 	"github.com/scncore/scnorion-console/internal/views/filters"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/stretchr/testify/assert"
@@ -53,9 +53,9 @@ func (suite *UpdatesTestSuite) SetupTest() {
 			SetOwnerID(fmt.Sprintf("agent%d", i))
 
 		if i%3 == 0 {
-			query.SetSystemUpdateStatus(openuem_nats.DISABLED)
+			query.SetSystemUpdateStatus(scnorion_nats.DISABLED)
 		} else {
-			query.SetSystemUpdateStatus(openuem_nats.NOTIFY_SCHEDULED_INSTALLATION)
+			query.SetSystemUpdateStatus(scnorion_nats.NOTIFY_SCHEDULED_INSTALLATION)
 		}
 
 		if i%2 == 0 {
@@ -107,7 +107,7 @@ func (suite *UpdatesTestSuite) TestUpdatesTestSuite() {
 	assert.NoError(suite.T(), err, "should count all system updates")
 	assert.Equal(suite.T(), 3, count, "should get 3 updates")
 
-	f = filters.SystemUpdatesFilter{UpdateStatus: []string{openuem_nats.NOTIFY_SCHEDULED_INSTALLATION}}
+	f = filters.SystemUpdatesFilter{UpdateStatus: []string{scnorion_nats.NOTIFY_SCHEDULED_INSTALLATION}}
 	count, err = suite.model.CountAllSystemUpdates(f, suite.commonInfo)
 	assert.NoError(suite.T(), err, "should count all system updates")
 	assert.Equal(suite.T(), 4, count, "should get 4 updates")

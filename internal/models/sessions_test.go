@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	openuem_ent "github.com/scncore/ent"
+	scnorion_ent "github.com/scncore/ent"
 	"github.com/scncore/ent/enttest"
 	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/stretchr/testify/assert"
@@ -108,7 +108,7 @@ func (suite *SessionsTestSuite) TestDeleteSession() {
 
 	err = suite.model.DeleteSession("token1")
 	if assert.Error(suite.T(), err) {
-		assert.Equal(suite.T(), openuem_ent.IsNotFound(err), true, "session with token token1 was deleted previously")
+		assert.Equal(suite.T(), scnorion_ent.IsNotFound(err), true, "session with token token1 was deleted previously")
 	}
 
 	sessions, err := suite.model.GetSessionsByPage(suite.p)
