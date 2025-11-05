@@ -4,9 +4,9 @@ import (
 	"context"
 	"strconv"
 
-	openuem_ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/settings"
-	"github.com/open-uem/ent/tenant"
+	openuem_ent "github.com/scncore/ent"
+	"github.com/scncore/ent/settings"
+	"github.com/scncore/ent/tenant"
 )
 
 type GeneralSettings struct {

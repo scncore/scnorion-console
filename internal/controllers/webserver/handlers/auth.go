@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/open-uem/openuem-console/internal/views"
-	"github.com/open-uem/openuem-console/internal/views/register_views"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
+	"github.com/scncore/scnorion-console/internal/views"
+	"github.com/scncore/scnorion-console/internal/views/register_views"
 )
 
 type MyCustomClaims struct {

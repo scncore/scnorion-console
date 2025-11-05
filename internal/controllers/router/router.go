@@ -13,11 +13,11 @@ import (
 	"github.com/invopop/ctxi18n"
 	"github.com/labstack/echo/v4"
 	mw "github.com/labstack/echo/v4/middleware"
-	"github.com/open-uem/openuem-console/internal/controllers/router/middleware"
-	"github.com/open-uem/openuem-console/internal/controllers/sessions"
-	"github.com/open-uem/openuem-console/internal/views"
-	"github.com/open-uem/openuem-console/internal/views/locales"
-	"github.com/open-uem/utils"
+	"github.com/scncore/scnorion-console/internal/controllers/router/middleware"
+	"github.com/scncore/scnorion-console/internal/controllers/sessions"
+	"github.com/scncore/scnorion-console/internal/views"
+	"github.com/scncore/scnorion-console/internal/views/locales"
+	"github.com/scncore/utils"
 )
 
 func New(s *sessions.SessionManager, server, port, maxUploadSize string) *echo.Echo {

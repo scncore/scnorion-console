@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/open-uem/utils"
+	"github.com/scncore/utils"
 	"github.com/urfave/cli/v2"
 )
 

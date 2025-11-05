@@ -20,13 +20,13 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/linde12/gowol"
 	"github.com/microcosm-cc/bluemonday"
-	openuem_ent "github.com/open-uem/ent"
-	openuem_nats "github.com/open-uem/nats"
-	models "github.com/open-uem/openuem-console/internal/models/winget"
-	"github.com/open-uem/openuem-console/internal/views/computers_views"
-	"github.com/open-uem/openuem-console/internal/views/filters"
-	"github.com/open-uem/openuem-console/internal/views/partials"
-	"github.com/open-uem/utils"
+	openuem_ent "github.com/scncore/ent"
+	openuem_nats "github.com/scncore/nats"
+	models "github.com/scncore/scnorion-console/internal/models/winget"
+	"github.com/scncore/scnorion-console/internal/views/computers_views"
+	"github.com/scncore/scnorion-console/internal/views/filters"
+	"github.com/scncore/scnorion-console/internal/views/partials"
+	"github.com/scncore/utils"
 )
 
 func (h *Handler) Overview(c echo.Context) error {

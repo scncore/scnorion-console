@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	openuem_ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/agent"
-	"github.com/open-uem/ent/enttest"
-	openuem_nats "github.com/open-uem/nats"
-	"github.com/open-uem/openuem-console/internal/views/filters"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	openuem_ent "github.com/scncore/ent"
+	"github.com/scncore/ent/agent"
+	"github.com/scncore/ent/enttest"
+	openuem_nats "github.com/scncore/nats"
+	"github.com/scncore/scnorion-console/internal/views/filters"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )

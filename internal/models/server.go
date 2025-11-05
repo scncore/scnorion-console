@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/server"
-	"github.com/open-uem/openuem-console/internal/views/filters"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	ent "github.com/scncore/ent"
+	"github.com/scncore/ent/server"
+	"github.com/scncore/scnorion-console/internal/views/filters"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
 func (m *Model) CountAllUpdateServers(f filters.UpdateServersFilter) (int, error) {

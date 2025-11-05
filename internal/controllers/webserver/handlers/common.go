@@ -7,10 +7,10 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	"github.com/open-uem/ent"
-	model "github.com/open-uem/openuem-console/internal/models/servers"
-	"github.com/open-uem/openuem-console/internal/views"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	"github.com/scncore/ent"
+	model "github.com/scncore/scnorion-console/internal/models/servers"
+	"github.com/scncore/scnorion-console/internal/views"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
 func (h *Handler) GetCommonInfo(c echo.Context) (*partials.CommonInfo, error) {

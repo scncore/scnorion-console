@@ -5,13 +5,13 @@ import (
 	"strconv"
 	"time"
 
-	ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/agent"
-	"github.com/open-uem/ent/deployment"
-	"github.com/open-uem/ent/site"
-	"github.com/open-uem/ent/tenant"
-	openuem_nats "github.com/open-uem/nats"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	ent "github.com/scncore/ent"
+	"github.com/scncore/ent/agent"
+	"github.com/scncore/ent/deployment"
+	"github.com/scncore/ent/site"
+	"github.com/scncore/ent/tenant"
+	openuem_nats "github.com/scncore/nats"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
 func (m *Model) GetDeploymentsForAgent(agentId string, p partials.PaginationAndSort, c *partials.CommonInfo) ([]*ent.Deployment, error) {

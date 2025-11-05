@@ -930,7 +930,7 @@ en:
     disabled_antivirus: Endpoints without an active antivirus system
     outdated_antivirus: Endpoints running outdated virus databases
     nats_server_status: NATS Server status
-    openuem_updater_api_status: ScnOrionPlus Updater API status
+    scnorion_updater_api_status: ScnOrionPlus Updater API status
     agent_worker_status: Agent Worker status
     notification_worker_status: Notification Worker status
     cert_manager_worker_status: Cert Manager Worker status
@@ -942,7 +942,7 @@ en:
     num_waiting_for_admission: Agents waiting for admission
     num_apps_found: Applications found
     num_deployments: Software deployments performed using ScnOrionPlus
-    num_openuem_users: Number of ScnOrionPlus users
+    num_scnorion_users: Number of ScnOrionPlus users
     num_sessions: Number of sessions opened in the console
     num_os_users: Number of users with and endpoint assigned
     no_reported_in_last_24h: Agents that haven't reported in the last 24h
@@ -1377,7 +1377,7 @@ en:
     oidc_provider_description: "Choose an ScnOrionPlus-compatible OIDC provider"
     oidc_provide_choose: "Choose your provider"
     oidc_url_title: "OIDC URL"
-    oidc_url_description: "OIDC provider's url that connects you with identity providers (for example https://example.com/application/o/open-uem/)"
+    oidc_url_description: "OIDC provider's url that connects you with identity providers (for example https://example.com/application/o/scnorion/)"
     oidc_client_id_title: "OIDC Client ID"
     oidc_client_id_description: "The Client ID for your OIDC application"
     oidc_role_or_group_title: "OIDC Role or group"

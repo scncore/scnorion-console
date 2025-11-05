@@ -153,7 +153,7 @@ es:
   WOL: "Wake On Lan"
   agents:
     title: "Agentes"
-    description: "Estos son los agentes que han contactado con el servidor de OpenUEM"
+    description: "Estos son los agentes que han contactado con el servidor de scnorion"
     hostname: "Nombre de host"
     nickname: "Nombre"
     version: "Versión"
@@ -172,18 +172,18 @@ es:
     vnc: "Serv. VNC"
     no_vnc: "Ninguno"
     vnc_title: "Asistencia remota"
-    vnc_description: "Si el equipo del usuario remoto cuenta con un servidor VNC (Windows o Linux con X11) o Linux con Gnome Remote Desktop (RDP para Wayland) y siempre que el equipo remoto y el equipo desde el que se ofrece la asistencia tengan conectividad (LAN o VPN) puede abrir una sesión de asistencia desde OpenUEM"
+    vnc_description: "Si el equipo del usuario remoto cuenta con un servidor VNC (Windows o Linux con X11) o Linux con Gnome Remote Desktop (RDP para Wayland) y siempre que el equipo remoto y el equipo desde el que se ofrece la asistencia tengan conectividad (LAN o VPN) puede abrir una sesión de asistencia desde scnorion"
     vnc_new_tab: "Abrir la sesión VNC/RDP en una nueva pestaña"
     vnc_pin_not_generated: "No se pudo generar un PIN para la conexión VNC"
     vnc_could_not_marshal: "No se pudo preparar la petición de sesión VNC"
     no_supported_vnc: "No está disponible la asistencia remota debido a una de las siguientes razones. La asistencia remota ha sido inhabilitada de forma global, el equipo no está en la red local, no hay una dirección IP asignada al agente, ningún usuario ha iniciado sesión o no está instalado un servidor VNC soportado"
     no_vnc_certificate: "El agente no cuenta con un certificado para proteger la conexión VNC. Si aún no ha admitido este agente, hágalo ahora para crear el certificado. Si ya lo ha hecho intente forzar un nuevo informe y si este mensaje sigue apareciendo, regenere el certificado para este agente"
-    deploy_description: "OpenUEM puede desplegar software en sus equipos de forma automática. Busque un paquete disponible en el repositorio e instálelo o seleccione un paquete desplegado para actualizarlo o desinstalarlo"
+    deploy_description: "scnorion puede desplegar software en sus equipos de forma automática. Busque un paquete disponible en el repositorio e instálelo o seleccione un paquete desplegado para actualizarlo o desinstalarlo"
     deploy_search: "Busque un paquete por su nombre para instalarlo"
     deploy_success: "Se ha enviado una petición al agente para instalar el paquete tan pronto como sea posible, compruebe más tarde si el paquete fue desplegado con éxito"
     update_success: "Se ha enviado una petición al agente para actualizar el paquete tan pronto como sea posible, compruebe más tarde si el paquete fue actualizado con éxito"
     uninstall_success: "Se ha enviado una petición al agente para desinstalar el paquete tan pronto como sea posible, compruebe más tarde si el paquete fue desinstalado con éxito"
-    deploy_list: "Paquetes desplegados desde OpenUEM en este equipo"
+    deploy_list: "Paquetes desplegados desde scnorion en este equipo"
     deploy_install_date: "Instalado"
     deploy_updated_date: "Actualizado"
     already_deployed: "Este paquete ya ha sido desplegado, sin embargo puede actualizarlo o instalarlo desde la tabla de paquetes desplegados"
@@ -205,8 +205,8 @@ es:
     force_run_success: "El agente consultará y enviará la nueva información, consúltela en unos minutos"
     has_been_enabled: "El agente ha sido activado"
     has_been_disabled: "El agente ha sido desactivado"
-    has_been_admitted: "El agente ha sido admitido y ya puede ser gestionado desde OpenUEM"
-    have_been_admitted: "Los agentes han sido admitidos y ya pueden ser gestionados desde OpenUEM"
+    has_been_admitted: "El agente ha sido admitido y ya puede ser gestionado desde scnorion"
+    have_been_admitted: "Los agentes han sido admitidos y ya pueden ser gestionados desde scnorion"
     have_been_enabled: "Los agentes han sido activados"
     have_been_disabled: "Los agentes han sido desactivados"
     some_could_not_be_admitted: "Algunos agentes no pudieron ser admitidos, compruebe los logs de la consola"
@@ -283,7 +283,7 @@ es:
     vnc_proxy_port: "Puerto del proxy VNC"
     debug_mode: "Modo depuración"
     remote_assistance: "Opción de asistencia remota VNC"
-    remote_assistance_description: "OpenUEM le permite utilizar servicios de terceros para brindar asistencia remota a sus usuarios utilizando diferentes herramientas y protocolos"
+    remote_assistance_description: "scnorion le permite utilizar servicios de terceros para brindar asistencia remota a sus usuarios utilizando diferentes herramientas y protocolos"
     remote_assistance_vnc_not_found: "No hay ningún servidor VNC compatible instalado en el punto final, instale uno"
     remote_assistance_rdp_found: "Gnome Remote Desktop (grdctl) está instalado en el equipo"
     remote_assistance_rdp_not_found: "Gnome Remote Desktop (grdctl) no está instalado en el punto final"
@@ -341,7 +341,7 @@ es:
   inventory:
     hardware:
       title: "Hardware"
-      description: "Esta es la información de hardware proporcionada por el agente de OpenUEM"
+      description: "Esta es la información de hardware proporcionada por el agente de scnorion"
       manufacturer: "Fabricante"
       model: "Modelo"
       serial: "Núm. Serie"
@@ -357,7 +357,7 @@ es:
       vendor: "Proveedor"
     os:
       title: "Sistema Operativo"
-      description: "Esta es la información del sistema operativo proporcionada por el agente de OpenUEM"
+      description: "Esta es la información del sistema operativo proporcionada por el agente de scnorion"
       version: "Versión"
       desc: "Descripción"
       architecture: "Arquitectura"
@@ -366,7 +366,7 @@ es:
       last_bootup: "Último arranque"
     monitor:
       title: "Monitores"
-      description: "Estos son los monitores conectados a este equipo de acuerdo con lo informado por el agente de OpenUEM"
+      description: "Estos son los monitores conectados a este equipo de acuerdo con lo informado por el agente de scnorion"
       manufacturer: "Fabricante"
       model: "Modelo"
       serial: "Núm. Serie"
@@ -376,7 +376,7 @@ es:
       report_title: "Monitor #s"
     logical_disk:
       title: "Discos Lógicos"
-      description: "Estos son los discos lógicos conectados a este equipo de acuerdo a la información proporcionada por el agente de OpenUEM"
+      description: "Estos son los discos lógicos conectados a este equipo de acuerdo a la información proporcionada por el agente de scnorion"
       label: "Etiqueta"
       volume_name: "Nombre de volumen"
       filesystem: "Sist. Fich."
@@ -395,7 +395,7 @@ es:
       report_mount_point: "Punto de montaje: %s"
     physical_disk:
       title: "Discos físicos"
-      description: "Estos son los discos físicos conectados a este equipo de acuerdo a la información proporcionada por el agente de OpenUEM"
+      description: "Estos son los discos físicos conectados a este equipo de acuerdo a la información proporcionada por el agente de scnorion"
       device: "Dispositivo"
       model: "Fabricante y modelo"
       serial: "Número de serie"
@@ -413,7 +413,7 @@ es:
       remove_folder: "Eliminar carpeta"
     share:
       title: "Recursos Compartidos"
-      description: "Estos son los recursos compartidos exportados por este equipo según informa el agente de OpenUEM"
+      description: "Estos son los recursos compartidos exportados por este equipo según informa el agente de scnorion"
       name: "Nombre"
       descr: "Descripción"
       path: "Ruta"
@@ -421,7 +421,7 @@ es:
       report_title: "Recurso compartido #%s"
     printers:
       title: "Impresoras"
-      description: "Estas son las impresoras conectadas a este equipo de acuerdo a lo informado por el agente de OpenUEM"
+      description: "Estas son las impresoras conectadas a este equipo de acuerdo a lo informado por el agente de scnorion"
       port: "Puerto"
       is_default: "¿Por defecto?"
       is_network_printer: "¿Impr. de Red?"
@@ -431,7 +431,7 @@ es:
       report_title: "Impresora %s"
     network_adapters:
       title: "Adaptadores de red"
-      description: "Estos son los adaptadores de red conectados a este equipo de acuerdo a lo informado por el agente de OpenUEM"
+      description: "Estos son los adaptadores de red conectados a este equipo de acuerdo a lo informado por el agente de scnorion"
       ip_address: "Dirección IP"
       mac_address: "Dirección MAC"
       subnet: "Subred"
@@ -443,14 +443,14 @@ es:
       report_title: "NIC #%s"
     apps:
       title: "Aplicaciones"
-      description: "Estas son las aplicaciones encontradas en este equipo de acuerdo a lo informado por el agente de OpenUEM"
+      description: "Estas son las aplicaciones encontradas en este equipo de acuerdo a lo informado por el agente de scnorion"
       installation_date: "Fecha Inst."
       no_apps: "No existe aún información disponible sobre las aplicaciones de este equipo"
       report_title: "App %s"
 
   apps:
     title: "Aplicaciones"
-    description: "Estas son las aplicaciones encontradas en su organización de acuerdo a lo que han informado los agentes de OpenUEM"
+    description: "Estas son las aplicaciones encontradas en su organización de acuerdo a lo que han informado los agentes de scnorion"
     name: "Nombre"
     publisher: "Desarrollador"
     num_installations: "Núm. Instalaciones"
@@ -461,7 +461,7 @@ es:
     filter_by_version: "Filtrar por versión..."
   antivirus:
     title: "Antivirus"
-    description: "Esta es la información sobre los sistemas de antivirus informada por los agentes de OpenUEM que han contactado"
+    description: "Esta es la información sobre los sistemas de antivirus informada por los agentes de scnorion que han contactado"
     hostname: "Nombre de equipo"
     name: "Nombre"
     os: "S.O"
@@ -473,7 +473,7 @@ es:
     filter_by_updated: "Filtrar por estado de actualización del antivirus"
   install:
     title: "Instalación  de software"
-    phase_1: "Busca paquetes de software que pueden ser instalados por los agentes de OpenUEM bajo demanda. Después use el botón asociado a cada paquete para seleccionar en qué agentes debe instalarse"
+    phase_1: "Busca paquetes de software que pueden ser instalados por los agentes de scnorion bajo demanda. Después use el botón asociado a cada paquete para seleccionar en qué agentes debe instalarse"
     phase_2: "Selecciona los agentes en los que deseas instalar"
     search_empty_error: "Por favor escribe el nombre de un paquete a buscar"
     no_packages: "No se han encontrado paquetes con ese nombre"
@@ -488,13 +488,13 @@ es:
     could_not_count_packages: "No pude contar los paquetes, razón: %s"
   uninstall:
     title: "Desinstalación de software"
-    phase_1: "Busca paquetes de software que pueden ser desinstalados por los agentes de OpenUEM bajo demanda. Después use el botón asociado a cada paquete para seleccionar en qué agentes debe desinstalarse"
+    phase_1: "Busca paquetes de software que pueden ser desinstalados por los agentes de scnorion bajo demanda. Después use el botón asociado a cada paquete para seleccionar en qué agentes debe desinstalarse"
     phase_2: "Selecciona los agentes en los que deseas desinstalar"
     search_empty_error: "Por favor escriba el nombre de un paquete para buscar"
     no_packages: "No se han encontrado paquetes para ese nombre"
     requested: "Hemos solicitado a los agentes seleccionados que desinstalen este paquete, compruebe más tarde si el software se ha desinstalado correctamente en ese dispositivo"
   computers:
-    description: "Este es el inventario de equipos de su organización comunicado por los agentes que han contactado con el servidor OpenUEM"
+    description: "Este es el inventario de equipos de su organización comunicado por los agentes que han contactado con el servidor scnorion"
     filter_by_username: "Filtrar por nombre de usuario..."
     filter_by_os_version: "Filtrar por versión de sistema operativo"
     filter_by_manufacturer: "Filtrar por fabricante"
@@ -505,8 +505,8 @@ es:
     agent_disable: "¿Está seguro de que quiere desactivar este agente? El agente no enviará más información hasta que vuelva a ser activado"
     agent_delete: "¿Está seguro de que quiere borrar este agente y toda la información asociada? Tenga en cuenta que esta acción es irreversible y se considera destructiva"
     session_delete: "¿Está seguro de que quiere borrar esta sesión? El usuario tendrá que iniciar sesión nuevamente"
-    agent_admit: "¿Está seguro de que quiere admitir este agente? Al admitir el agente se podrá gestionar desde OpenUEM y su información aparecerá en las distintas vistas"
-    agents_admit: "¿Está seguro de que quiere admitir estos agentes? Al admitir los agentes se podrán gestionar desde OpenUEM y su información aparecerá en las distintas vistas"
+    agent_admit: "¿Está seguro de que quiere admitir este agente? Al admitir el agente se podrá gestionar desde scnorion y su información aparecerá en las distintas vistas"
+    agents_admit: "¿Está seguro de que quiere admitir estos agentes? Al admitir los agentes se podrán gestionar desde scnorion y su información aparecerá en las distintas vistas"
     agents_enable: "¿Está seguro de que quiere activar estos agentes?"
     agents_disable: "¿Está seguro de que quiere desactivar estos agentes? Los agentes no enviarán más información hasta que vuelvan a ser activados"
   forms:
@@ -515,7 +515,7 @@ es:
     button: "Inicie sesión con certificado digital"
     openid: "Iniciar sesión con OpenID Connect"
   register:
-    description: "Complete el formulario para registrarse en la aplicación. Un administrador de OpenUEM revisará su solicitud."
+    description: "Complete el formulario para registrarse en la aplicación. Un administrador de scnorion revisará su solicitud."
     button: "Regístrese"
     uid: "ID de Usuario"
     name: "Nombre"
@@ -538,11 +538,11 @@ es:
     back: "Ir al inicio"
     country: "País"
     email_confirmed: "Ha confirmado su dirección"
-    email_confirmed_description: "El administrador de OpenUEM revisará su solicitud y generará un certificado digital para que pueda acceder"
+    email_confirmed_description: "El administrador de scnorion revisará su solicitud y generará un certificado digital para que pueda acceder"
   new:
     user:
       title: "Nuevo Usuario"
-      description: "Cree un nuevo usuario para la consola OpenUEM. Si selecciona usar certificados para iniciar sesión, el usuario recibirá un correo electrónico con un certificado digital adjunto. Este certificado debe estar instalado en cualquier navegador que se utilice para administrar la organización."
+      description: "Cree un nuevo usuario para la consola scnorion. Si selecciona usar certificados para iniciar sesión, el usuario recibirá un correo electrónico con un certificado digital adjunto. Este certificado debe estar instalado en cualquier navegador que se utilice para administrar la organización."
       uid_help: "Este ID de usuario debe ser una cadena única y se utilizará para identificar al propietario del certificado digital o coincidir con el nombre de usuario después de una autenticación exitosa de Open ID Connect."
       success: "Se ha añadido un nuevo usuario que deberá confirmar su correo. Posteriormente el administrador deberá generar del certificado"
       success_oidc: "Se ha añadido un nuevo usuario"
@@ -551,7 +551,7 @@ es:
     add: "Agregar Usuario"
     completed: "Completado"
     created: "Fecha Creación"
-    description: "Estos son los usuarios que disponen de acceso a la consola de OpenUEM"
+    description: "Estos son los usuarios que disponen de acceso a la consola de scnorion"
     email: "Correo electr."
     import: "Importar Usuarios"
     modified: "Fecha Modificación"
@@ -611,13 +611,13 @@ es:
     history: "Act. Reciente"
   updates_history:
     title: "Historial de actualizaciones"
-    description: "Este el historial de las actualizaciones más recientes aplicadas a este equipo de acuerdo con lo informado por el agente de OpenUEM"
+    description: "Este el historial de las actualizaciones más recientes aplicadas a este equipo de acuerdo con lo informado por el agente de scnorion"
     update_title: "Descripción"
     date: "Fecha Instalación"
     support_url: "URL de soporte"
     no_info: "El historial de actualizaciones no está disponible aún"
   reports:
-    description: "Exporte información desde OpenUEM utilizando los siguientes informes predefinidos"
+    description: "Exporte información desde scnorion utilizando los siguientes informes predefinidos"
     computer: "Generar informe de equipo"
     agents: "Generar informe de agentes"
     computers: "Generar informe de equipos"
@@ -640,7 +640,7 @@ es:
     computer_inventory: "Inventario de equipo"
   sessions:
     data: "Datos"
-    description: "Estas son las sesiones abiertas en la consola de OpenUEM por los usuarios autenticados"
+    description: "Estas son las sesiones abiertas en la consola de scnorion por los usuarios autenticados"
     expiry: "Fecha Expir."
     nosessions: "No se han encontrado sesiones para esta consulta"
     title: "Sesiones"
@@ -663,11 +663,11 @@ es:
     no_metadata: "Aún no ha definido metadatos para su organización"
     new: "Nuevo metadato..."
     optional_description: "Descripción opcional..."
-    confirm_delete: "¿Está seguro de que quiere eliminar este metadato, tenga en cuenta que esta operación es destructiva y eliminará cualquier valor de este metadato asociado a los equipos gestionados por OpenUEM"
+    confirm_delete: "¿Está seguro de que quiere eliminar este metadato, tenga en cuenta que esta operación es destructiva y eliminará cualquier valor de este metadato asociado a los equipos gestionados por scnorion"
     edit: "Edite el nombre y/o la descripción del metadato de acuerdo a sus necesidades"
   certificates:
     title: "Certificados"
-    description: "Esta es la lista de certificados digitales utilizados por los distintos componentes y usuarios de OpenUEM. Si tuviera conocimiento de que un certificado ha sido comprometido puede revocarlo"
+    description: "Esta es la lista de certificados digitales utilizados por los distintos componentes y usuarios de scnorion. Si tuviera conocimiento de que un certificado ha sido comprometido puede revocarlo"
     about_to_expiry: "Este certificado expirará pronto"
     filter_by_serial: "Filtrar por número de serie..."
     filter_by_username: "Filtrar por usuario..."
@@ -708,8 +708,8 @@ es:
     test_success: Se envió con éxito el email de prueba a %s
   settings:
     title: Configuración general
-    description: OpenUEM tiene algunos ajustes que configuran su comportamiento.
-    global: "Estos son los ajustes globales de OpenUEM y que son heredados por las organizaciones. Use el menú de desplegable de organización para cambiar sus ajustes"
+    description: scnorion tiene algunos ajustes que configuran su comportamiento.
+    global: "Estos son los ajustes globales de scnorion y que son heredados por las organizaciones. Use el menú de desplegable de organización para cambiar sus ajustes"
     tenant: "Estos son los ajustes específicos para esta organización. Estos ajuste se heredan de la configuración global, pero se pueden sobrescribir o puede usar el botón para aplicar nuevamente la configuración global"
     country_title: País
     country_description: País por defecto para el registro de usuarios
@@ -734,7 +734,7 @@ es:
     session_lifetime_description: Tiempo de vida de la sesión en minutos pasado el cual se cerrará la sesión
     session_lifetime_invalid: Tiempo de vida de sesión no válido
     update_channel_title: Canal de actualizaciones
-    update_channel_description: Canal utilizado para la comprobación y descarga de actualizaciones de OpenUEM
+    update_channel_description: Canal utilizado para la comprobación y descarga de actualizaciones de scnorion
     update_channel_invalid: Canal no válido
     agent_frequency_title: Frecuencia de informes de los agentes
     agent_frequency_description: Los agentes enviarán periódicamente un informe con la frecuencia indicada en minutos
@@ -790,13 +790,13 @@ es:
     disable_remote_assistance_error: La configuración de la Asistencia Remota no pudo comunicarse a los agentes, inténtelo más tarde
     disable_remote_assistance_to_all: No se pudo actualizar la configuración de asistencia remota para todos los agentes
     detect_remote_agents_title: Detectar agentes remotos
-    detect_remote_agents_description: OpenUEM marcará como remotos a aquellos agentes para los que la dirección IP incluida en el informe no coincide con la IP resuelta por DNS
+    detect_remote_agents_description: scnorion marcará como remotos a aquellos agentes para los que la dirección IP incluida en el informe no coincide con la IP resuelta por DNS
     detect_remote_agents_success: La configuración de detección de agentes remotos se ha guardado
     detect_remote_agents_invalid: El valor seleccionado para la detección de agentes remotos no es válido
     detect_remote_agents_could_not_be_saved: La configuración de detección de agentes remotos no pudo guardarse
     could_not_get_detect_remote_agents_setting: No se pudo consultar la configuración de detección de agentes remotos
     auto_admit_agents_title: Admitir agentes automáticamente
-    auto_admit_agents_description: OpenUEM admitirá los agentes automáticamente sin esperar a que el administrador los admita. Tenga en cuenta que tendrá que solicitar la generación de los certificados del agente desde el menú de acciones del agente si quiere conectarse vía SFTP o VNC/RDP
+    auto_admit_agents_description: scnorion admitirá los agentes automáticamente sin esperar a que el administrador los admita. Tenga en cuenta que tendrá que solicitar la generación de los certificados del agente desde el menú de acciones del agente si quiere conectarse vía SFTP o VNC/RDP
     auto_admit_agents_success: La configuración de admisión de agentes automáticamente se ha guardado
     auto_admit_agents_invalid: El valor seleccionado para la admisión de agentes automáticamente no es válido
     auto_admit_agents_could_not_be_saved: La configuración de admisión de agentes automáticamente no pudo guardarse
@@ -805,7 +805,7 @@ es:
     could_not_apply_global_settings: "No se pudo aplicar la configuración global, razón: %s"
   restore:
     title: Restaurar
-    description: Aquí puede restaurar algunos elementos críticos de OpenUEM en caso de que algo vaya terriblemente mal
+    description: Aquí puede restaurar algunos elementos críticos de scnorion en caso de que algo vaya terriblemente mal
     agent_rollback_title: Restaurar agentes
     agent_rollback_description: Si los agentes no informan correctamente tras aplicar una actualización bajo demanda y necesita volver a la versión previa a la actualización. Esta acción se aplicará a todos los agentes
     messenger_rollback_title: Restaurar Messenger
@@ -847,12 +847,12 @@ es:
     update:
       agents:
         title: "Actualizar agentes"
-        description: "Actualice los agentes de OpenUEM cuando estén disponibles nuevas versiones. Seleccione la versión a la que desea actualizar y los agentes a los que desea aplicar la actualización. La actualización puede ocurrir tan pronto como el agente recibe la orden o puede programar cuándo se aplicará. Si algo va mal, existe la posibilidad de dar marcha atrás y aplicar la versión que funcionaba previamente"
-        success: "Se ha enviado una petición para actualizar la versión del agente de OpenUEM"
-        higher_version: "Versión actualmente desplegada del agente de OpenUEM: "
+        description: "Actualice los agentes de scnorion cuando estén disponibles nuevas versiones. Seleccione la versión a la que desea actualizar y los agentes a los que desea aplicar la actualización. La actualización puede ocurrir tan pronto como el agente recibe la orden o puede programar cuándo se aplicará. Si algo va mal, existe la posibilidad de dar marcha atrás y aplicar la versión que funcionaba previamente"
+        success: "Se ha enviado una petición para actualizar la versión del agente de scnorion"
+        higher_version: "Versión actualmente desplegada del agente de scnorion: "
         new_version_available: "Existe una nueva versión disponible: "
         no_new_version_available: "Está usando la última versión disponible para este canal: "
-        get_version_error: "No pude obtener información del API del servicio de actualizaciones de OpenUEM"
+        get_version_error: "No pude obtener información del API del servicio de actualizaciones de scnorion"
         outdated: "Este agente parece tener una versión que no coincide con la versión desplegada actualmente"
         current: "Versión al día"
         critical: "Actualización crítica"
@@ -866,7 +866,7 @@ es:
         release_cant_be_empty: "La versión no puede contener una cadena vacía"
         cannot_send_request: "La petición de actualización no pudo enviarse al agente, inténtelo más tarde"
         some_errors_found: "Algunos agentes no pudieron recibir las peticiones de actualización"
-        rollback_success: "Se ha enviado una petición para reaizar una regresión del agente de OpenUEM"
+        rollback_success: "Se ha enviado una petición para reaizar una regresión del agente de scnorion"
         task_update: "Actualizar a la versión %s"
         task_updated: "La versión ha sido actualizada"
         task_rollback: "Volver a versión anterior"
@@ -887,8 +887,8 @@ es:
         filter_by_task_execution: "Filtrar por fecha de última ejecución"
       servers:
         title: "Actualizar servidores"
-        description: "Estos son los servidores de OpenUEM instalados, incluyendo dónde se encuentran y qué versión están ejecutando. Puede actualizar los servidores a la versión seleccionada. IMPORTANTE: al actualizar la versión, la consola se reiniciará por lo que puede perder la conexión por unos instantes hasta que el servicio se reinicie"
-        success: "Se ha enviado una petición para actualizar la versión del servidor de OpenUEM"
+        description: "Estos son los servidores de scnorion instalados, incluyendo dónde se encuentran y qué versión están ejecutando. Puede actualizar los servidores a la versión seleccionada. IMPORTANTE: al actualizar la versión, la consola se reiniciará por lo que puede perder la conexión por unos instantes hasta que el servicio se reinicie"
+        success: "Se ha enviado una petición para actualizar la versión del servidor de scnorion"
         some_errors_found: "Algunos servidores no pudieron recibir las peticiones de actualización"
         servers_cant_be_empty: "La variable servidores no puede contener una cadena vacía"
         release_cant_be_empty: "La versión no puede contener una cadena vacía"
@@ -902,7 +902,7 @@ es:
         update_status: "Est. Actual."
         update_info: "Info Actual."
         update_when: "Última Actual."
-        get_version_error: "No pude obtener información del API del servicio de actualizaciones de OpenUEM"
+        get_version_error: "No pude obtener información del API del servicio de actualizaciones de scnorion"
         filter_by_hostname: "Filtrar por nombre de equipo"
         filter_by_component: "Filtrar por componente"
         filter_by_release: "Filtrar por versión"
@@ -919,7 +919,7 @@ es:
         available: "Actualización disponible"
         confirm_update_all: "¿Desea continuar con la actualización de TODOS los servidores seleccionados a la versión %s?"
         confirm_specify_when: "Si lo desea puede especificar el día y la hora a la que desea que se actualicen los servidores, de lo contrario la actualización se realizará lo antes posible"
-        confirm_delete: "¿Desea eliminar este servidor de la tabla de actualizaciones? Tenga en cuenta que deberá desinstalar manualmente OpenUEM de dicho equipo"
+        confirm_delete: "¿Desea eliminar este servidor de la tabla de actualizaciones? Tenga en cuenta que deberá desinstalar manualmente scnorion de dicho equipo"
         server_deleted: "El servidor fue eliminado"
         could_not_parse_server_id: "No se pudo convertir el id del servidor"
         could_not_delete: "El servidor no pudo eliminarse, razón: %s"
@@ -930,7 +930,7 @@ es:
     disabled_antivirus: Equipos sin sistema de antivirus activo
     outdated_antivirus: Equipos con bases de datos de virus desactualizadas
     nats_server_status: Estado del servidor de NATS
-    openuem_updater_api_status: Estado del API de OpenUEM Updater
+    scnorion_updater_api_status: Estado del API de scnorion Updater
     agent_worker_status: Estado del Procesador de Agentes
     notification_worker_status: Estado del Procesador de Notificaciones
     cert_manager_worker_status: Estado del Gestor de Certificados
@@ -941,8 +941,8 @@ es:
     num_disabled_agents: Agentes desactivados
     num_waiting_for_admission: Agentes esperando admisión
     num_apps_found: Número de aplicaciones encontradas
-    num_deployments: Despliegues de software realizados con OpenUEM
-    num_openuem_users: Número de usuarios de OpenUEM
+    num_deployments: Despliegues de software realizados con scnorion
+    num_scnorion_users: Número de usuarios de scnorion
     num_sessions: Número de sesiones abiertas en la consola
     num_os_users: Número de usuarios con un equipo asignado
     no_reported_in_last_24h: Agentes que no han informado desde hace más de 24h
@@ -1009,7 +1009,7 @@ es:
     assign_tags: "Aplicar a aquellos que tengan una de las siguientes etiquetas"
     profile_empty_site: "El perfil no puede asociarse a un sitio vacío"
   tasks:
-    description: "Las tareas permiten realizar acciones sobre los equipos de forma automática (instalación de paquetes, desinstalación de paquetes, modificación del registro, gestionar paquetes MSI...) que serán ejecutadas por los agentes de OpenUEM"
+    description: "Las tareas permiten realizar acciones sobre los equipos de forma automática (instalación de paquetes, desinstalación de paquetes, modificación del registro, gestionar paquetes MSI...) que serán ejecutadas por los agentes de scnorion"
     choose_task_type: "Elija un tipo de tarea"
     choose_task_subtype: "Elija un tipo de subtarea"
     winget_install: "Instalar paquete con WinGet"
@@ -1257,7 +1257,7 @@ es:
 
   tenants:
     title: "Organizaciones"
-    description: "OpenUEM permite gestionar diferentes organizaciones. Una organización puede tener uno o más sitios en los que se agrupan los equipos. Una organización por defecto con un sitio por defecto es creada donde se agregan los equipos si no se configura ninguna organización y/o sitio en el agente"
+    description: "scnorion permite gestionar diferentes organizaciones. Una organización puede tener uno o más sitios en los que se agrupan los equipos. Una organización por defecto con un sitio por defecto es creada donde se agregan los equipos si no se configura ninguna organización y/o sitio en el agente"
     add: "Añadir organization"
     import: "Importar organizaciones"
     set_as_default: "Establecer como predet."
@@ -1266,7 +1266,7 @@ es:
     created: "Fecha Creación"
     modified: "Fecha Modificación"
     edit_title: "Edite la organización"
-    edit_description: "Cambie el nombre de la organización, o elija si esta organización será la organización predeterminada donde los agentes se agruparán por defecto si no tienen información de donde deben ser agregados. Tenga en cuenta que OpenUEM requiere que al menos una organización, y como mucho una, debe ser seleccionada como predeterminada"
+    edit_description: "Cambie el nombre de la organización, o elija si esta organización será la organización predeterminada donde los agentes se agruparán por defecto si no tienen información de donde deben ser agregados. Tenga en cuenta que scnorion requiere que al menos una organización, y como mucho una, debe ser seleccionada como predeterminada"
     edit_success: "La organización ha sido modificada"
     tenant_cannot_be_empty: "El ID de la organización no puede estar vacío"
     site_cannot_be_empty: "The ID del sitio no puede estar vacío"
@@ -1274,7 +1274,7 @@ es:
     tenant_not_found: "La organización no pudo encontrarse, razón: %s"
     name_cannot_be_empty: "El nombre de la organización no puede estar vacío"
     could_not_convert_to_bool: "El estado predeterminado de la organización no pudo convertise en un booleano, razón: %s"
-    at_least_one_tenant: "OpenUEM necesita tener al menos una organización, no puede borrar esta organización"
+    at_least_one_tenant: "scnorion necesita tener al menos una organización, no puede borrar esta organización"
     could_not_check_name: "No se pudo comprobar si el nombre de esta organización ya está cogido, razón: %s"
     tenant_name_taken: "%s ya está cogido, use un nombre diferente"
     could_not_get_common_info: "La información común requerida para esta acción no se pudo obtener, razón: %s"
@@ -1306,7 +1306,7 @@ es:
 
   sites:
     title: "Sitio"
-    description: "OpenUEM permite gestionar diferentes organizaciones. Una organización puede tener uno o más sitios en los que se agrupan los equipos"
+    description: "scnorion permite gestionar diferentes organizaciones. Una organización puede tener uno o más sitios en los que se agrupan los equipos"
     add: "Añadir sitio"
     import: "Importar sitios"
     set_as_default: "Establecer como predet."
@@ -1362,32 +1362,32 @@ es:
 
   authentication:
     title: "Autenticación"
-    description: "Configure cómo la consola OpenUEM autentica a sus usuarios y varios aspectos relacionados con las cuentas de usuario"
+    description: "Configure cómo la consola scnorion autentica a sus usuarios y varios aspectos relacionados con las cuentas de usuario"
     could_not_get_settings: "no se pudieron obtener la configuración de autenticación, motivo: %s"
     settings_save: "Guardar configuración"
     settings_saved: "La configuración de autenticación se ha guardado"
     settings_not_saved: "La configuración de autenticación no se pudo guardar, razón: %s"
     use_certificates_title: "Usar certificados para iniciar sesión"
-    use_certificates_description: "Usar certificados firmados por la OpenUEM CA para iniciar sesión en la consola"
+    use_certificates_description: "Usar certificados firmados por la scnorion CA para iniciar sesión en la consola"
     allow_register_title: "Mostrar Registo en la página de inicio de sesión"
     allow_register_description: "Un botón de registro que enlaza con un formulario estará disponible"
     use_oidc_title: "Usar Open ID Connect"
     use_oidc_description: "OpenID connect le permite usar proveedores de identidad externos para iniciar sesión"
     oidc_provider_title: "Proveedor OIDC"
-    oidc_provider_description: "Elegir un proveedor OIDC compatible con OpenUEM"
+    oidc_provider_description: "Elegir un proveedor OIDC compatible con scnorion"
     oidc_provide_choose: "Elija su proveedor"
     oidc_url_title: "OIDC URL"
-    oidc_url_description: "URL del proveedor OIDC que le conecta con sus proveedores de identidad (por ejemplo https://example.com/application/o/open-uem/)"
+    oidc_url_description: "URL del proveedor OIDC que le conecta con sus proveedores de identidad (por ejemplo https://example.com/application/o/scnorion/)"
     oidc_client_id_title: "ID de cliente OIDC"
     oidc_client_id_description: "El ID de cliente para su aplicación OIDC"
     oidc_role_or_group_title: "Rol o grupo de OIDC"
-    oidc_role_or_group_description: "Un rol o grupo del que el usuario debe ser miembro para poder iniciar sesión (openuem, por ejemplo)"
+    oidc_role_or_group_description: "Un rol o grupo del que el usuario debe ser miembro para poder iniciar sesión (scnorion, por ejemplo)"
     oidc_keycloak_public_key_title: "Clave pública de OIDC Keycloak"
     oidc_keycloak_public_key_description: "Si se selecciona el rol/grupo, necesitamos la clave pública que se puede recuperar desde Configuración del Realm Settings - Key"
     oidc_autocreate_account_title: "Crear cuenta de OIDC (automáticamente)"
-    oidc_autocreate_account_description: "Si un usuario es miembro del rol o grupo definido, se crea automáticamente una cuenta; de lo contrario, primero se debe crear la cuenta en OpenUEM"
+    oidc_autocreate_account_description: "Si un usuario es miembro del rol o grupo definido, se crea automáticamente una cuenta; de lo contrario, primero se debe crear la cuenta en scnorion"
     oidc_autoapprove_account_title: "Aprobación de cuenta de OIDC (automática)"
-    oidc_autoapprove_account_description: "Si un usuario es miembro del rol o grupo definido, el acceso se aprueba automáticamente; de lo contrario, la cuenta primero debe aprobarse en OpenUEM"
+    oidc_autoapprove_account_description: "Si un usuario es miembro del rol o grupo definido, el acceso se aprueba automáticamente; de lo contrario, la cuenta primero debe aprobarse en scnorion"
     could_not_parse_use_certificates: "No se pudo analizar el uso de certificados"
     could_not_parse_allow_register: "No se pudo analizar el registro permitido"
     could_not_parse_use_oidc: "No se pudo analizar el uso de OIDC"
@@ -1406,7 +1406,7 @@ es:
     use_certs_must_be_enabled: "El uso de certificados debe estar habilitado si permite que los usuarios se registren"
     cannot_check_if_user_exists: "No se puede verificar si el usuario existe en la base de datos."
     cannot_create_oidc_user: "No se puede crear un nuevo usuario OIDC, motivo: %s"
-    an_admin_must_create_your_account: "Un administrador debe crear primero la cuenta en OpenUEM"
+    an_admin_must_create_your_account: "Un administrador debe crear primero la cuenta en scnorion"
     oidc: "Utiliza OpenID Connect para iniciar sesión"
     certificate: "Utiliza certificados para iniciar sesión"
     type: "Tipo de autenticación"
@@ -1415,7 +1415,7 @@ es:
 
   rustdesk:
     settings_title: "RustDesk"
-    settings_description: "OpenUEM puede usar RustDesk para abrir sesiones de asistencia remota. RustDesk se puede instalar en los endpoints mediante las opciones de implementación de OpenUEM. Si utiliza su propio servidor de ID o servidor de retransmisión, puede introducir aquí el nombre de host o la dirección IP, y la clave utilizada para cifrar las comunicaciones. Si utiliza RustDesk Pro, también puede introducir el servidor API. Si no se configura aquí, se utilizarán los servidores públicos de RustDesk."
+    settings_description: "scnorion puede usar RustDesk para abrir sesiones de asistencia remota. RustDesk se puede instalar en los endpoints mediante las opciones de implementación de scnorion. Si utiliza su propio servidor de ID o servidor de retransmisión, puede introducir aquí el nombre de host o la dirección IP, y la clave utilizada para cifrar las comunicaciones. Si utiliza RustDesk Pro, también puede introducir el servidor API. Si no se configura aquí, se utilizarán los servidores públicos de RustDesk."
     settings_rendezvous_server_title: "ID Server"
     settings_rendezvous_server_description: "La dirección IP o el nombre de host de su servidor de identificación RustDesk (servidor hbbs)"
     settings_relay_server_title: "Relay Server"
@@ -1456,7 +1456,7 @@ es:
     rustdesk_rendezvous_server: "IDs Server:"
     rustdesk_connect: "Utilice los siguientes enlaces para abrir la aplicación RustDesk. Estos enlaces contienen toda la información para establecer la conexión, excepto el cliente web de RustDesk."
     rustdesk_settings: "Estas son las credenciales y configuraciones utilizadas para esta conexión, en caso de que necesite configurar su cliente RustDesk manualmente"
-    rustdesk_rollback: "OpenUEM reemplaza la configuración de RustDesk utilizada en su endpoint. Use el siguiente botón para cerrar la aplicación RustDesk en el equipo remoto y revertir la configuración."    
+    rustdesk_rollback: "scnorion reemplaza la configuración de RustDesk utilizada en su endpoint. Use el siguiente botón para cerrar la aplicación RustDesk en el equipo remoto y revertir la configuración."    
     click_to_open_web_client: "Abra la aplicación web RustDesk"
     apply_global_settings: "Aplicar la configuración global de RustDesk"
     rustdesk_flatpak_wayland: "El equipo remoto tiene instalada la aplicación RustDesk con Flatpak en una pantalla Wayland. La aplicación no se puede abrir de forma remota, ya que el usuario debe especificar qué pantalla desea usar con Wayland. Por lo tanto, informe al usuario que primero debe abrir la aplicación RustDesk."

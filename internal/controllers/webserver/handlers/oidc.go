@@ -21,10 +21,10 @@ import (
 	"github.com/coreos/go-oidc/v3/oidc"
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	"github.com/open-uem/ent"
-	"github.com/open-uem/nats"
-	"github.com/open-uem/openuem-console/internal/auth"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	"github.com/scncore/ent"
+	"github.com/scncore/nats"
+	"github.com/scncore/scnorion-console/internal/auth"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 	"golang.org/x/oauth2"
 )
 

@@ -1,10 +1,10 @@
 package charts
 
 import (
-	"github.com/open-uem/openuem-console/internal/models"
 	"github.com/go-echarts/go-echarts/v2/charts"
 	"github.com/go-echarts/go-echarts/v2/opts"
 	"github.com/go-echarts/go-echarts/v2/render"
+	"github.com/scncore/scnorion-console/internal/models"
 )
 
 func Top10Apps(topApps []models.App) render.ChartSnippet {

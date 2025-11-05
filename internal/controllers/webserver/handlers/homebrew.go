@@ -3,8 +3,8 @@ package handlers
 import (
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	models "github.com/open-uem/openuem-console/internal/models/winget"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	models "github.com/scncore/scnorion-console/internal/models/winget"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
 func (h *Handler) SearchHomeBrewFormulaePackages(c echo.Context) error {

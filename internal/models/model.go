@@ -10,14 +10,14 @@ import (
 	"entgo.io/ent/dialect"
 	entsql "entgo.io/ent/dialect/sql"
 	_ "github.com/jackc/pgx/v5/stdlib"
-	ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/agent"
-	"github.com/open-uem/ent/migrate"
-	"github.com/open-uem/ent/orgmetadata"
-	"github.com/open-uem/ent/profile"
-	"github.com/open-uem/ent/site"
-	"github.com/open-uem/ent/tag"
-	"github.com/open-uem/ent/tenant"
+	ent "github.com/scncore/ent"
+	"github.com/scncore/ent/agent"
+	"github.com/scncore/ent/migrate"
+	"github.com/scncore/ent/orgmetadata"
+	"github.com/scncore/ent/profile"
+	"github.com/scncore/ent/site"
+	"github.com/scncore/ent/tag"
+	"github.com/scncore/ent/tenant"
 )
 
 type Model struct {

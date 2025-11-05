@@ -5,11 +5,11 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/open-uem/ent/agent"
-	"github.com/open-uem/ent/metadata"
-	"github.com/open-uem/ent/site"
-	"github.com/open-uem/ent/tenant"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	"github.com/scncore/ent/agent"
+	"github.com/scncore/ent/metadata"
+	"github.com/scncore/ent/site"
+	"github.com/scncore/ent/tenant"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
 func (m *Model) SaveEndpointDescription(agentID string, description string, c *partials.CommonInfo) error {

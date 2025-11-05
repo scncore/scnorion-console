@@ -5,7 +5,7 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	"github.com/open-uem/openuem-console/internal/views/login_views"
+	"github.com/scncore/scnorion-console/internal/views/login_views"
 )
 
 func (h *Handler) Login(c echo.Context) error {

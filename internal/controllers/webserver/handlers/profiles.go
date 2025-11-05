@@ -8,10 +8,10 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	"github.com/open-uem/ent"
-	"github.com/open-uem/ent/task"
-	"github.com/open-uem/openuem-console/internal/views/partials"
-	"github.com/open-uem/openuem-console/internal/views/profiles_views"
+	"github.com/scncore/ent"
+	"github.com/scncore/ent/task"
+	"github.com/scncore/scnorion-console/internal/views/partials"
+	"github.com/scncore/scnorion-console/internal/views/profiles_views"
 )
 
 func (h *Handler) Profiles(c echo.Context, successMessage string) error {

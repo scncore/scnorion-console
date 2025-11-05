@@ -3,9 +3,9 @@ package models
 import (
 	"context"
 
-	ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/rustdesk"
-	"github.com/open-uem/ent/tenant"
+	ent "github.com/scncore/ent"
+	"github.com/scncore/ent/rustdesk"
+	"github.com/scncore/ent/tenant"
 )
 
 func (m *Model) GetRustDeskSettings(tenantID int) ([]*ent.Rustdesk, error) {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"strconv"
 
-	ent "github.com/open-uem/ent"
-	"github.com/open-uem/ent/orgmetadata"
-	"github.com/open-uem/ent/tenant"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	ent "github.com/scncore/ent"
+	"github.com/scncore/ent/orgmetadata"
+	"github.com/scncore/ent/tenant"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 )
 
 func (m *Model) GetAllOrgMetadata(c *partials.CommonInfo) ([]*ent.OrgMetadata, error) {

@@ -1,7 +1,7 @@
 package layout
 
 import (
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 	"strings"
 )
 
@@ -28,7 +28,7 @@ templ Base(section string, commonInfo *partials.CommonInfo) {
 			<script src="/assets/js/icon.iife.js" type="module"></script>
 			<script src="/assets/js/htmx.min.js"></script>
 			<script src="/assets/js/echarts.min.js"></script>
-			<script src="/assets/js/openuem.js" type="module"></script>
+			<script src="/assets/js/scnorion.js" type="module"></script>
 			<script>
 				const htmlElement = document.documentElement;
 
@@ -43,7 +43,7 @@ templ Base(section string, commonInfo *partials.CommonInfo) {
 				}
 
 				htmlElement.classList.add(
-					localStorage.getItem("theme") || "uk-theme-openuem",
+					localStorage.getItem("theme") || "uk-theme-scnorion",
 				);
 			</script>
 		</head>

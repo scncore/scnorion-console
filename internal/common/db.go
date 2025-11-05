@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/go-co-op/gocron/v2"
-	"github.com/open-uem/openuem-console/internal/controllers/authserver"
-	"github.com/open-uem/openuem-console/internal/controllers/sessions"
-	"github.com/open-uem/openuem-console/internal/controllers/webserver"
-	"github.com/open-uem/openuem-console/internal/models"
+	"github.com/scncore/scnorion-console/internal/controllers/authserver"
+	"github.com/scncore/scnorion-console/internal/controllers/sessions"
+	"github.com/scncore/scnorion-console/internal/controllers/webserver"
+	"github.com/scncore/scnorion-console/internal/models"
 )
 
 func (w *Worker) StartDBConnectJob() error {

@@ -10,4 +10,4 @@ Versions that are currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-If you want to report a vulnerability please send an email to info@openuem.eu
+If you want to report a vulnerability please send an email to info@scnorion.eu

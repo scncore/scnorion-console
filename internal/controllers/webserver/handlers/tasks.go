@@ -10,11 +10,11 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	"github.com/open-uem/ent/task"
-	"github.com/open-uem/openuem-console/internal/models"
-	"github.com/open-uem/openuem-console/internal/views/partials"
-	"github.com/open-uem/openuem-console/internal/views/tasks_views"
-	"github.com/open-uem/wingetcfg/wingetcfg"
+	"github.com/scncore/ent/task"
+	"github.com/scncore/scnorion-console/internal/models"
+	"github.com/scncore/scnorion-console/internal/views/partials"
+	"github.com/scncore/scnorion-console/internal/views/tasks_views"
+	"github.com/scncore/wingetcfg/wingetcfg"
 )
 
 func (h *Handler) NewTask(c echo.Context) error {

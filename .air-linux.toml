@@ -3,7 +3,7 @@ testdata_dir = "testdata"
 tmp_dir = "tmp"
 
 [build]
-  args_bin = ["start", "--domain", "openuem.lab", "--org-name", "OpenUEM", "--org-province", "Valladolid", "--org-locality", "Valladolid", "--country", "ES", "--jwt-key", "supers3cr3t", "--nats-servers", "rohan.openuem.lab:4433", "--cacert" , "tmp/ca.cer", "--server-name", "rohan.openuem.lab", "--cert", "tmp/console.cer", "--key", "tmp/console.key", "--sftpkey", "tmp/sftp.key"]
+  args_bin = ["start", "--domain", "scnorion.lab", "--org-name", "scnorion", "--org-province", "Valladolid", "--org-locality", "Valladolid", "--country", "ES", "--jwt-key", "supers3cr3t", "--nats-servers", "rohan.scnorion.lab:4433", "--cacert" , "tmp/ca.cer", "--server-name", "rohan.scnorion.lab", "--cert", "tmp/console.cer", "--key", "tmp/console.key", "--sftpkey", "tmp/sftp.key"]
   bin = "./tmp/main" 
   cmd = "go build -o ./tmp/main ./main.go"
   delay = 1000

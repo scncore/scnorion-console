@@ -3,8 +3,8 @@ package handlers
 import (
 	"crypto/x509"
 
-	"github.com/open-uem/openuem-console/internal/controllers/sessions"
-	"github.com/open-uem/openuem-console/internal/models"
+	"github.com/scncore/scnorion-console/internal/controllers/sessions"
+	"github.com/scncore/scnorion-console/internal/models"
 )
 
 type Handler struct {

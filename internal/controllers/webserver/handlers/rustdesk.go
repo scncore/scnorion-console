@@ -9,11 +9,11 @@ import (
 
 	"github.com/invopop/ctxi18n/i18n"
 	"github.com/labstack/echo/v4"
-	"github.com/open-uem/ent"
-	"github.com/open-uem/nats"
-	"github.com/open-uem/openuem-console/internal/views/admin_views"
-	"github.com/open-uem/openuem-console/internal/views/computers_views"
-	"github.com/open-uem/openuem-console/internal/views/partials"
+	"github.com/scncore/ent"
+	"github.com/scncore/nats"
+	"github.com/scncore/scnorion-console/internal/views/admin_views"
+	"github.com/scncore/scnorion-console/internal/views/computers_views"
+	"github.com/scncore/scnorion-console/internal/views/partials"
 	"github.com/sethvargo/go-password/password"
 )
 
